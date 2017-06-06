@@ -144,6 +144,19 @@ class Configuration
     );
 
     /**
+     * Add custom storage
+     *
+     * @param $key
+     * @param $className
+     * @return $this
+     */
+    public function addStorage($key, $className)
+    {
+        $this->availableStorages[$key] = $className;
+        return $this;
+    }
+
+    /**
      * Returns the current blacklist.
      *
      * @return array
